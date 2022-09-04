@@ -6,3 +6,4 @@
 
 - 36_5-1 Get API key and load temperature data by city name
 - 36_5-2 Display temperature, city and weather condition
+- 36_5-3 Explore News API with API key
