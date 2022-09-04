@@ -10,9 +10,13 @@ const loadTemperature = (city) => {
 
 const displayTemperature = (temperature) => {
   console.log(temperature);
-  const cityName = document.getElementById('city-name')
+  const cityName = document.getElementById("city-name");
   cityName.innerText = temperature.name;
-  document.getElementById('temp').innerText = temperature.main.temp;
+  document.getElementById("temp").innerText = temperature.main.temp;
+  document.getElementById("condition").innerText = temperature.weather[0].main;
 };
 
-loadTemperature("dhaka");
+document.getElementById("search-btn").addEventListener("click", function () {
+  const city = document.getElementById("search-field").value;
+  loadTemperature(city);
+});
