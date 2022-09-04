@@ -9,11 +9,17 @@ const loadTemperature = (city) => {
 };
 
 const displayTemperature = (temperature) => {
-  console.log(temperature);
-  const cityName = document.getElementById("city-name");
-  cityName.innerText = temperature.name;
-  document.getElementById("temp").innerText = temperature.main.temp;
-  document.getElementById("condition").innerText = temperature.weather[0].main;
+  // console.log(temperature);
+  // document.getElementById("city-name").innerText = temperature.name;
+  // document.getElementById("temp").innerText = temperature.main.temp;
+  // document.getElementById("condition").innerText = temperature.weather[0].main;
+  setInnerTextById("city-name", temperature.name);
+  setInnerTextById("temp", temperature.main.temp);
+  setInnerTextById("condition", temperature.weather[0].main);
+};
+
+const setInnerTextById = (id, text) => {
+  document.getElementById(id).innerText = text;
 };
 
 document.getElementById("search-btn").addEventListener("click", function () {
